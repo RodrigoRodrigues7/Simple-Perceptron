@@ -6,8 +6,8 @@ class Point {
   int label;
   
   Point() {
-    x = random(width);
-    y = random(height);
+    x = random(-1, 1);
+    y = random(-1, 1);
     
     if(x > y ) {
       label = 1;
@@ -15,6 +15,14 @@ class Point {
       label = -1;
     }
     
+  }
+  
+  float pixelX(){
+    return map(x, -1, 1, 0, width);
+  }
+  
+  float pixelY(){
+   return map(y, -1, 1, height, 0);
   }
   
   void show() {
@@ -25,7 +33,10 @@ class Point {
     } else {
       fill(0);
     }
-    ellipse(x, y, 14, 14);
+    
+    float px = pixelX();
+    float py = pixelY();
+    ellipse(px, py, 16, 16);
   }
   
 }

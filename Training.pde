@@ -1,15 +1,27 @@
 
+float f(float x){
+  // y = mx + b <--- this is the formula for a line
+  return 0.8*x - 0.2;
+}
 
 class Point {
   float x ;
   float y ;
+  float bias = 1;
   int label;
+  
+  Point(float x_, float y_) {
+    x = x_;
+    y = y_;
+  }
   
   Point() {
     x = random(-1, 1);
     y = random(-1, 1);
     
-    if(x > y ) {
+    float lineY = f(x);
+    
+    if(y > lineY ) {
       label = 1;
     } else {
       label = -1;

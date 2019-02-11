@@ -1,4 +1,3 @@
-
 float f(float x){
   // y = mx + b <--- this is the formula for a line
   return 0.8*x - 0.2;
@@ -26,7 +25,6 @@ class Point {
     } else {
       label = -1;
     }
-    
   }
   
   float pixelX(){

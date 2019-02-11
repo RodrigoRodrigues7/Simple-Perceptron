@@ -1,16 +1,14 @@
 Perceptron brain;
 Point[] points = new Point[150];
-
 int trainingIndex = 0;
-void setup() {
-  
+
+void setup() { 
   size(700, 700);
   brain = new Perceptron(3);
   
   for(int i = 0; i < points.length; i++) {
     points[i] = new Point();
   }
-  
 }
 
 void draw() {
@@ -53,7 +51,6 @@ void draw() {
   if(trainingIndex == points.length){
     trainingIndex = 0;
   }
-  
 }
 
 
@@ -61,4 +58,5 @@ void mousePressed() {
   for(Point pt : points) {
 
   }
+
 }
